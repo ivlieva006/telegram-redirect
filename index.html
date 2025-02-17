@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Перенаправление...</title>
     <script>
+        // Получаем текущий URL с UTM-метками
+        var params = window.location.search;
+        // Формируем ссылку в Telegram с UTM-метками
+        var telegramUrl = "https://t.me/+xpkVwIkwjNJiYTMy" + params;
+        // Редирект через 1 секунду, чтобы Метрика успела записать посещение
         setTimeout(function() {
-            window.location.href = "https://t.me/+xpkVwIkwjNJiYTMy";
+            window.location.href = telegramUrl;
         }, 1000);
     </script>
     <!-- Код Яндекс.Метрики -->
